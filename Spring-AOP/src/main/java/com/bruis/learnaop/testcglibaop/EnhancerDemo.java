@@ -37,7 +37,7 @@ public class EnhancerDemo {
     private static class MethodInterceptorImpl implements MethodInterceptor {
         @Override
         public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-            System.err.println("Before invoke " + method);
+            System.out.println("Before invoke " + method);
             Object result = methodProxy.invokeSuper(o, objects);
             System.out.println("After invoke" + method);
             return result;
